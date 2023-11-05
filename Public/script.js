@@ -10,7 +10,7 @@ function formatCategoryName(categoryName) {
 
 async function fetchCategories() {
     try {
-        const response = await fetch('http://localhost:3000/get-categories');
+        const response = await fetch('https://6547cc55c496e56f10209dab--heartfelt-madeleine-3611ce.netlify.app/');
         if (!response.ok) {
             console.error('Failed to fetch categories:', response.statusText);
             return;
@@ -43,7 +43,7 @@ function submitInsult() {
 
     submitButton.textContent = 'Submitting...';
 
-    fetch('http://localhost:3000/submit-insult', {
+    fetch('https://6547cc55c496e56f10209dab--heartfelt-madeleine-3611ce.netlify.app/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
