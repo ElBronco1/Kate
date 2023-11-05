@@ -10,7 +10,7 @@ function formatCategoryName(categoryName) {
 
 async function fetchCategories() {
     try {
-        const response = await fetch('https://6547cc55c496e56f10209dab--heartfelt-madeleine-3611ce.netlify.app/');
+        const response = await fetch('https://us-central1-kate-6055a.cloudfunctions.net/get-categories');
         if (!response.ok) {
             console.error('Failed to fetch categories:', response.statusText);
             return;
@@ -43,7 +43,7 @@ function submitInsult() {
 
     submitButton.textContent = 'Submitting...';
 
-    fetch('https://6547cc55c496e56f10209dab--heartfelt-madeleine-3611ce.netlify.app/', {
+    fetch('https://us-central1-kate-6055a.cloudfunctions.net/submit-insult', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
